@@ -1,16 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import random
 import re
-
-
-# In[2]:
-
-
 #definir la baraja
 def baraja():
     baraja = []
@@ -28,10 +17,6 @@ def baraja():
                 baraja.append((repr(v)+i))
     return baraja
 baraja=baraja()
-
-
-# In[3]:
-
 
 #restar baraja
 def restar_baraja(baraja,juego):
@@ -55,10 +40,6 @@ def repartir(baraja):
     print("Cartas del jugador ", jugador)
     return repartidor, jugador
 
-
-# In[4]:
-
-
 #aumento de cartas
 def aumento(cartas):
     if Juego(repartidor) >= 17:
@@ -71,12 +52,8 @@ def aumento(cartas):
         return aumento(cartas)
 
 
-# In[5]:
-
-
 #Comparativa
 def Juego(juego):
-    print(juego)
     sum = 0
     for i in juego:
         if (len("".join(i))>2):
@@ -90,10 +67,6 @@ def Juego(juego):
                 elif ('A'in v):
                     sum +=11
     return(int(sum))
-
-
-# In[ ]:
-
 
 juegos = repartir(baraja)
 repartidor = juegos[0]
@@ -133,10 +106,3 @@ elif Juego(jugador) > 21:
 elif Juego(jugador) == 21:
     print("Repartidor tiene: " + str(Juego(repartidor)) + " con: ", repartidor)
     print("21 Jugador Gana")
-
-
-# In[ ]:
-
-
-
-
