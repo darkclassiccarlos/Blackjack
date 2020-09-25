@@ -75,7 +75,7 @@ if Juego(jugador) == 21:
     print("Jugador tiene: ", jugador + "Blackjack Gana")
 elif Juego(jugador) > 21:
     print("Jugador tiene: ", jugador + "jugador pierde")
-while Juego(jugador) < 21:
+while Juego(jugador) <= 21:
     Accion = str(input("Carta o no carta? (responda si o no ) "))
     if Accion == 'si':        
         random.shuffle(baraja)
