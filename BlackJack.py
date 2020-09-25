@@ -90,7 +90,7 @@ while Juego(jugador) < 21:
         if (Juego(repartidor)<21) and (Juego(repartidor)) >= Juego(jugador):
             print("Jugador pierde")
             break
-        elif Juego(repartidor) > 21:
+        elif Juego(repartidor) > 21 or Juego(repartidor)< Juego(jugador):
             print("Jugador Gana")
             break
         elif Juego(jugador) == 21 and Juego(repartidor) == 21:
@@ -100,7 +100,7 @@ while Juego(jugador) < 21:
             break
         
 if Juego(repartidor) ==21:
-    print("Repartidor tiene 21 gana repartidor")
+    print("Repartidor tiene 21 gana repartidor"+ " con: ", repartidor)
 elif Juego(jugador) > 21:
     print("Jugador pierde")
 elif Juego(jugador) == 21:
